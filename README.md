@@ -78,7 +78,7 @@ Berikut adalah tabel perbandingan performa CNN dan LSTM:
 
 Model LSTM yang telah dilatih berhasil mencapai akurasi yang baik pada dataset uji. Berikut adalah grafik yang menunjukkan performa model selama pelatihan dan validasi:
 
-![Grafik Performa Model](images/grafik_performa.png)
+![Grafik Performa Model](grafik/uap_lstm_akurasi.png)
 
 Gambar di atas menunjukkan perbandingan antara akurasi dan loss pelatihan dan validasi selama 20 epoch.
 
@@ -86,7 +86,7 @@ Gambar di atas menunjukkan perbandingan antara akurasi dan loss pelatihan dan va
 
 Model CNN yang telah dilatih berhasil mencapai akurasi yang baik pada dataset uji. Berikut adalah grafik yang menunjukkan performa model selama pelatihan dan validasi:
 
-![Grafik Performa Model](images/grafik_performa.png)
+![Grafik Performa Model](grafik/uap_cnn_akurasi.png)
 
 Gambar di atas menunjukkan perbandingan antara akurasi dan loss pelatihan dan validasi selama 20 epoch.
 
