@@ -118,11 +118,12 @@ Model dievaluasi menggunakan metrik seperti akurasi, precision, recall, dan F1-s
 
 ## Link Live Demo  
 
-**Repository:** [UAP-ML GitHub](https://github.com/Nollingd/UAP-ML.git)  
+**URL:** [](https://github.com/Nollingd/UAP-ML.git)  
 
 ---
 
 ## Author  
 Proyek ini dikembangkan oleh:  
-- **Naufal Angling**  
+- **Naufal Angling**
+- **202110370311066**  
 - **Kontak:** [nopalangling@gmail.com](mailto:nopalangling@gmail.com)  
