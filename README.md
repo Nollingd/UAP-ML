@@ -11,6 +11,20 @@ Tujuan utama proyek ini adalah:
 
 **Dataset**: Ulasan produk berasal dari [Amazon Mobile Reviews Dataset](https://www.kaggle.com/datasets/PromptCloudHQ/amazon-reviews-unlocked-mobile-phones/data).  
 
+## Preprocessing Data
+Sebelum melatih model, data ulasan pelanggan yang berupa teks perlu dipersiapkan melalui beberapa tahapan preprocessing untuk memastikan kualitas dan konsistensi input. Tahapan preprocessing yang dilakukan adalah sebagai berikut:
+
+1. **Data Cleaning**
+   - Penghapusan URL: URL dalam teks dihapus karena tidak memberikan informasi relevan untuk analisis sentimen.
+   - Penghapusan Karakter Non-Alfabet: Karakter non-alfabet seperti angka, tanda baca, dan simbol lainnya dihapus agar hanya kata-kata yang relevan yang tersisa.
+   - Menghapus Spasi Berlebih: Semua spasi ekstra dihapus untuk menjaga teks tetap bersih dan terstruktur.
+
+2. **Lowercasing**
+   Semua teks diubah menjadi huruf kecil agar kata yang sama dengan kapitalisasi berbeda (misalnya, "Phone" dan "phone") dianggap identik. Hal ini mengurangi variasi yang tidak perlu dalam data.
+3. **Lemmatization**
+   Lemmatization mengubah kata menjadi bentuk dasarnya (lemma). Misalnya, "running" menjadi "run", atau "better" menjadi "good". Lemmatization memperhitungkan konteks dalam kalimat sehingga menghasilkan kata dasar yang tepat.
+Proses ini dilakukan menggunakan pustaka nltk, yang memberikan alat untuk memproses teks secara efisien.
+
 ---
 
 ## Langkah Instalasi IDE Local 
@@ -26,7 +40,9 @@ Tujuan utama proyek ini adalah:
    ```bash
    pip install -r requirements.txt
    ```
-
+3. **Ekstrak Dataset**  
+    Lakukan ekstraksi atau unzip untuk file dataset yang sudah bersih dan tinggal implementasi model.
+   
 3. **Jalankan aplikasi web**  
    Aplikasi web menggunakan Gradio. Untuk menjalankannya, buka file Jupyter Notebook yang ada di repository ini, dan jalankan kode Gradio. Setelah itu, URL aplikasi akan muncul di terminal/Jupyter Notebook. Klik URL tersebut untuk mengakses aplikasi web.  
 
