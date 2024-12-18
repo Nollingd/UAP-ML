@@ -1,8 +1,8 @@
 
-# UAP-ML: Sentiment Analysis of Amazon Mobile Phone Reviews
+# UAP-ML: Klasifikasi Sentimen Ulasan Pelanggan pada Produk Ponsel Bekas Berbasis Neural Network
 
 ## Deskripsi Proyek  
-Proyek ini bertujuan untuk membangun sistem klasifikasi sentimen ulasan produk Amazon, khususnya untuk kategori _unlocked mobile phones_. Sistem ini menggunakan metode deep learning berbasis CNN dan LSTM untuk memproses data teks ulasan dan memprediksi sentimen (positif, negatif, atau netral).
+Proyek ini bertujuan untuk membangun sistem klasifikasi sentimen ulasan produk Amazon, khususnya untuk kategori _unlocked mobile phones_. Sistem ini menggunakan metode deep learning berbasis CNN dan LSTM untuk memproses data teks ulasan dan memprediksi sentimen (positif atau negatif).
 
 Tujuan utama proyek ini adalah:  
 - Menganalisis performa dua arsitektur model (CNN dan LSTM).  
@@ -13,7 +13,7 @@ Tujuan utama proyek ini adalah:
 
 ---
 
-## Langkah Instalasi  
+## Langkah Instalasi IDE Local 
 
 1. **Clone repository ini**  
    ```bash
@@ -30,6 +30,8 @@ Tujuan utama proyek ini adalah:
 3. **Jalankan aplikasi web**  
    Aplikasi web menggunakan Gradio. Untuk menjalankannya, buka file Jupyter Notebook yang ada di repository ini, dan jalankan kode Gradio. Setelah itu, URL aplikasi akan muncul di terminal/Jupyter Notebook. Klik URL tersebut untuk mengakses aplikasi web.  
 
+4. **Catatan**  
+   Wajib run urut dari atas agar memunculkan file tokenizer dan model.  
 ---
 
 ## Deskripsi Model  
@@ -54,12 +56,7 @@ LSTM digunakan untuk menangkap konteks jangka panjang dalam data teks. Arsitektu
 - Output layer  
 
 **Gambar Struktur LSTM:**  
-<img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*kT7TJdlJflJJSnEJ6XRKug.png" alt="Struktur CNN" width="600"/>
-
-### Analisis Performa  
-Model dievaluasi menggunakan metrik seperti akurasi, precision, recall, dan F1-score pada data validasi. Hasil menunjukkan bahwa:  
-- **CNN** lebih unggul dalam memproses data teks pendek dengan pola yang jelas.  
-- **LSTM** memberikan hasil lebih baik untuk teks yang memiliki konteks panjang.  
+<img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*kT7TJdlJflJJSnEJ6XRKug.png" alt="Struktur CNN" width="600"/> 
 
 ---
 
@@ -78,7 +75,10 @@ Berikut adalah tabel perbandingan performa CNN dan LSTM:
 
 Model LSTM yang telah dilatih berhasil mencapai akurasi yang baik pada dataset uji. Berikut adalah grafik yang menunjukkan performa model selama pelatihan dan validasi:
 
-![Grafik Performa Model](grafik/uap_lstm_akurasi.png)
+<div style="display: flex; justify-content: space-around;">
+  <img src="grafik/uap_lstm_akurasi.png" alt="Grafik Akurasi" width="45%" />
+  <img src="grafik/uap_lstm_loss.png" alt="Grafik Loss" width="45%" />
+</div>
 
 Gambar di atas menunjukkan perbandingan antara akurasi dan loss pelatihan dan validasi selama 20 epoch.
 
@@ -86,14 +86,21 @@ Gambar di atas menunjukkan perbandingan antara akurasi dan loss pelatihan dan va
 
 Model CNN yang telah dilatih berhasil mencapai akurasi yang baik pada dataset uji. Berikut adalah grafik yang menunjukkan performa model selama pelatihan dan validasi:
 
-![Grafik Performa Model](grafik/uap_cnn_akurasi.png)
+<div style="display: flex; justify-content: space-around;">
+  <img src="grafik/uap_cnn_akurasi.png" alt="Grafik Akurasi" width="45%" />
+  <img src="grafik/uap_cnn_loss.png" alt="Grafik Loss" width="45%" />
+</div>
 
 Gambar di atas menunjukkan perbandingan antara akurasi dan loss pelatihan dan validasi selama 20 epoch.
+
+### Analisis Performa  
+Model dievaluasi menggunakan metrik seperti akurasi, precision, recall, dan F1-score pada data test. Hasil menunjukkan bahwa:  
+- **Kinerja Setara:** Secara keseluruhan, kedua model (CNN dan LSTM) menunjukkan performa yang hampir identik, dengan hanya sedikit perbedaan di antara mereka. CNN sedikit lebih unggul dalam hal akurasi dan precision, sementara LSTM sedikit lebih unggul dalam hal recall.  
+- **Pilihan Model:** Pilihan antara CNN dan LSTM dapat bergantung pada prioritas tertentu dalam aplikasi. Jika precision lebih penting, CNN bisa menjadi pilihan terbaik. Namun, jika recall lebih diutamakan, maka LSTM bisa dipertimbangkan lebih baik. F1-score yang setara menunjukkan bahwa kedua model dapat digunakan dengan efektif untuk tugas klasifikasi sentimen ini. 
 
 ---
 
 ## Link Live Demo  
-Aplikasi web dapat diakses dengan menjalankan kode Gradio di Jupyter Notebook. Setelah dijalankan, URL akan muncul di terminal atau output Notebook. Klik URL tersebut untuk mengakses aplikasi dan inputkan teks ulasan yang akan diprediksi.  
 
 **Repository:** [UAP-ML GitHub](https://github.com/Nollingd/UAP-ML.git)  
 
