@@ -112,13 +112,8 @@ Gambar di atas menunjukkan perbandingan antara akurasi dan loss pelatihan dan va
 ### Analisis Performa  
 Model dievaluasi menggunakan metrik seperti akurasi, precision, recall, dan F1-score pada data test. Hasil menunjukkan bahwa:  
 - **Kinerja Setara:** Secara keseluruhan, kedua model (CNN dan LSTM) menunjukkan performa yang hampir identik, dengan hanya sedikit perbedaan di antara mereka. CNN sedikit lebih unggul dalam hal akurasi dan precision, sementara LSTM sedikit lebih unggul dalam hal recall.  
-- **Pilihan Model:** Pilihan antara CNN dan LSTM dapat bergantung pada prioritas tertentu dalam aplikasi. Jika precision lebih penting, CNN bisa menjadi pilihan terbaik. Namun, jika recall lebih diutamakan, maka LSTM bisa dipertimbangkan lebih baik. F1-score yang setara menunjukkan bahwa kedua model dapat digunakan dengan efektif untuk tugas klasifikasi sentimen ini. 
-
----
-
-## Link Live Demo  
-
-**URL:** [](https://github.com/Nollingd/UAP-ML.git)  
+- **Pilihan Model:** Pilihan antara CNN dan LSTM dapat bergantung pada prioritas tertentu dalam aplikasi. Jika precision lebih penting, CNN bisa menjadi pilihan terbaik. Namun, jika recall lebih diutamakan, maka LSTM bisa dipertimbangkan lebih baik. F1-score yang setara menunjukkan bahwa kedua model dapat digunakan dengan efektif untuk tugas klasifikasi sentimen ini.
+ 
 
 ---
 
